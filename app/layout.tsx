@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex h-screen  ">
+        <main className="flex min-h-screen  ">
           <Sidebar />
           <div className="flex-1 flex flex-col">
             <Header />
