@@ -23,29 +23,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex min-h-screen  ">
+        <main className="flex min-h-screen bg-gray-300 ">
           {/* cover */}
           <div className="fixed w-full h-screen flex justify-between">
             <Sidebar />
             <div className="flex-1">
               {/* mobile */}
-              <div className="grid grid-cols-2 grid-rows-3 h-screen md:hidden">
-                <div className="border"></div>
-                <div className="border"></div>
-                <div className="border"></div>
-                <div className="border"></div>
-                <div className="border"></div>
-                <div className="border"></div>
+              <div className="grid grid-cols-2 grid-rows-3 h-screen md:hidden ">
+                <div className=""></div>
+                <div className="border-r border-l border-gray-500/40"></div>
+                <div className=" border-t border-b border-gray-500/40"></div>
+                <div className="border border-gray-500/40"></div>
+                <div className=""></div>
+                <div className="border-l border-r border-gray-500/40"></div>
               </div>
 
               {/* desktop */}
-              <div className="hidden  md:grid grid-cols-3 grid-rows-2 h-screen ">
-                <div className="border"></div>
-                <div className="border"></div>
-                <div className="border"></div>
-                <div className="border"></div>
-                <div className="border"></div>
-                <div className="border"></div>
+              <div className="hidden md:grid grid-cols-3 grid-rows-2 h-screen ">
+                <div className="border-l border-t border-gray-500/40"></div>
+                <div className="border-l border-t border-r border-gray-500/40"></div>
+                <div className="border-r border-t border-gray-500/40"></div>
+                <div className="border-t border-l  border-gray-500/40"></div>
+                <div className="border-t border-l border-r border-gray-500/40"></div>
+                <div className="border-t border-r border-gray-500/40"></div>
               </div>
             </div>
             <Navbar />
