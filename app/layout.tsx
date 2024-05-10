@@ -24,13 +24,41 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="flex min-h-screen  ">
-          <Sidebar />
+          {/* cover */}
+          <div className="fixed w-full h-screen flex justify-between">
+            <Sidebar />
+            <div className="flex-1">
+              {/* mobile */}
+              <div className="grid grid-cols-2 grid-rows-3 h-screen md:hidden">
+                <div className="border"></div>
+                <div className="border"></div>
+                <div className="border"></div>
+                <div className="border"></div>
+                <div className="border"></div>
+                <div className="border"></div>
+              </div>
+
+              {/* desktop */}
+              <div className="hidden  md:grid grid-cols-3 grid-rows-2 h-screen ">
+                <div className="border"></div>
+                <div className="border"></div>
+                <div className="border"></div>
+                <div className="border"></div>
+                <div className="border"></div>
+                <div className="border"></div>
+              </div>
+            </div>
+            <Navbar />
+          </div>
+
+          {/* content */}
+          <div className="hidden md:flex w-[10rem] min-w-[16vw] "></div>
           <div className="flex-1 flex flex-col">
             <Header />
             <section className="flex-1 flex ">{children}</section>
             <Footer />
           </div>
-          <Navbar />
+          <div className=" w-[3rem] md:w-[6.5rem]"></div>
         </main>
       </body>
     </html>
